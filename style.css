@@ -149,5 +149,24 @@ nav a:hover {
 
   nav a {
     opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -.75em; /* top: -.75em to be above text */
+    left: 0;
+    right: 0;
+    transform: scale(0 , 1);
+    transform-origin: center; /* left, right or center, where the line will grow from */
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
   }
 }
