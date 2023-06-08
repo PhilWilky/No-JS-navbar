@@ -165,7 +165,7 @@ nav a:hover {
     transform-origin: center; /* left, right or center, where the line will grow from */
     transition: transform ease-in-out 250ms;
   }
-
+  
   nav a:hover::before {
     transform: scale(1,1);
   }
